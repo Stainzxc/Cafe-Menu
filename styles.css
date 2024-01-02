@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,8 +16,7 @@ body {
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
   font-size: 50px;
 }
 .established {
@@ -34,13 +34,17 @@ hr {
   max-width: 600px;
   width: 50%;
   background-color: #c8ae7d;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0px 20px;
   border-radius: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.menu#menu-blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
 }
 section img,
 h2 {
@@ -50,8 +54,7 @@ h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
 }
 img {
   width: 30px;
@@ -64,8 +67,7 @@ img {
 }
 li {
   list-style: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 10px 0px;
   cursor: pointer;
 }
 li:hover {
@@ -78,8 +80,7 @@ li:hover {
   justify-content: space-between;
 }
 footer {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,20 +89,65 @@ footer a {
   margin-left: 4px;
 }
 a {
- color: black;
- text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
   text-decoration-color: #65451f;
   text-decoration-thickness: 2px;
 }
-
+#modal {
+  width: 400px;
+  background-color: transparent;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+  opacity: 0;
+  border-radius: 6px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  transition: 0.5s;
+  display: column;
+  align-items: center;
+}
+#modal.active {
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+.modal .close-modal {
+  text-align: center;
+  padding: 5px 0px;
+}
+.modal button {
+  border-radius: 6px;
+  width: 250px;
+  padding: 6px;
+  background-color: #c8ae7d;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.modal button:hover {
+  background-color: #65451f;
+  color: #c8ae7d;
+}
+.modal .modal-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.modal .modal-product {
+  text-align: center;
+}
 /* Applies to screens with width less than or equal to 600px */
 @media screen and (max-width: 640px) {
   h1 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 0px;
     font-size: 35px;
   }
   .menu {
@@ -115,8 +161,7 @@ a:hover {
     transform: translate(-50%, -50%);
   }
   .product-info {
-    margin-right: -10px;
-    margin-left: -10px;
+    margin: 0px -5px;
   }
   .established {
     font-size: 15px;

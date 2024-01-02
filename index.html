@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="menu">
+    <div class="menu" id="menu-blur">
       <main>
         <h1>CAFE MENU</h1>
         <p class="established">Est. 2023</p>
@@ -15,15 +15,12 @@
         <section>
           <div class="menu-product">
             <h2>Coffee</h2>
-            <img
-              src="./images/coffee-cup.png"
-              alt="coffee icon"
-            />
+            <img src="./images/coffee-cup.png" alt="coffee icon" />
           </div>
           <div class="product-info">
             <ul class="flavor">
-              <li>French Vanilla</li>
-              <li>Caramel Macchiato</li>
+              <li onclick="toggle('French Vanilla')">French Vanilla</li>
+              <li onclick="toggle('Caramel Macchiato')">Caramel Macchiato</li>
               <li>Pumpkin Spice</li>
               <li>Hazelnut</li>
               <li>Mocha</li>
@@ -42,10 +39,7 @@
         <section>
           <div class="menu-product">
             <h2>Desserts</h2>
-            <img
-              src="./images/bread.png"
-              alt="coffee icon"
-            />
+            <img src="./images/bread.png" alt="coffee icon" />
           </div>
           <div class="product-info">
             <ul class="flavor">
@@ -69,10 +63,22 @@
       </main>
       <hr />
       <footer>
-        <p>&copy; All Rights Reserved. </p>
+        <p>&copy; All Rights Reserved.</p>
         <a href="#" onclick="showAlert()"> Cafe Menu</a>
       </footer>
     </div>
+    <section>
+      <article>
+        <div class="modal" id="modal">
+          <div class="modal-product">
+            <img src="" alt="" class="modal-image" id="flavor-image" />
+          </div>
+          <div class="close-modal">
+            <button onclick="toggle()">OK</button>
+          </div>
+        </div>
+      </article>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
