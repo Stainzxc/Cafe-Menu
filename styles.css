@@ -144,6 +144,10 @@ a:hover {
 .modal .modal-product {
   text-align: center;
 }
+#flavor-description {
+  text-align: center;
+  padding: 0px 12px;
+}
 /* Applies to screens with width less than or equal to 600px */
 @media screen and (max-width: 640px) {
   h1 {

@@ -19,12 +19,12 @@
           </div>
           <div class="product-info">
             <ul class="flavor">
-              <li onclick="toggle('French Vanilla')">French Vanilla</li>
-              <li onclick="toggle('Caramel Macchiato')">Caramel Macchiato</li>
-              <li>Pumpkin Spice</li>
-              <li>Hazelnut</li>
-              <li>Mocha</li>
-              <li>Chocolate</li>
+              <li onclick="toggle('Caramel')">Caramel</li>
+              <li onclick="toggle('Hazelnut')">Hazelnut</li>
+              <li onclick="toggle('Espresso')">Espresso</li>
+              <li onclick="toggle('Cinnamon')">Cinnamon</li>
+              <li onclick="toggle('Mocha')">Mocha</li>
+              <li onclick="toggle('Chocolate')">Chocolate</li>
             </ul>
             <ul class="price">
               <li>80.00</li>
@@ -43,12 +43,12 @@
           </div>
           <div class="product-info">
             <ul class="flavor">
-              <li>Donut</li>
-              <li>Cherry Pie</li>
-              <li>Cheesecake</li>
-              <li>Cinnamon Roll</li>
-              <li>Mamon</li>
-              <li>Cheesebread</li>
+              <li onclick="toggle('Donut')">Donut</li>
+              <li onclick="toggle('Cherry Pie')">Cherry Pie</li>
+              <li onclick="toggle('Cheesecake')">Cheesecake</li>
+              <li onclick="toggle('Cinnamon Buns')">Cinnamon Buns</li>
+              <li onclick="toggle('Cake')">Cake</li>
+              <li onclick="toggle('Cupcakes')">Cupcakes</li>
             </ul>
             <ul class="price">
               <li>50.00</li>
@@ -72,6 +72,7 @@
         <div class="modal" id="modal">
           <div class="modal-product">
             <img src="" alt="" class="modal-image" id="flavor-image" />
+            <p id="flavor-description"></p>
           </div>
           <div class="close-modal">
             <button onclick="toggle()">OK</button>
