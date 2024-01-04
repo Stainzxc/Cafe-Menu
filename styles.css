@@ -129,6 +129,7 @@ a:hover {
   background-color: #c8ae7d;
   font-weight: bold;
   cursor: pointer;
+  border: 2px solid black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .modal button:hover {
@@ -141,9 +142,42 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.cart {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: 2px;
+}
 .modal .modal-product {
   text-align: center;
 }
+.modal-product button {
+  width: 40px;
+  padding-top: 8px;
+  border: 2px solid black;
+}
+.modal-product .cart input {
+  margin: 0px 5px;
+  border-radius: 6px;
+  width: 100px;
+  height: 40px;
+  padding: 6px;
+  background-color: #c8ae7d;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid black;
+}
+.modal-product button .cart-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+.modal .modal-product button .cart-icon:hover {
+  filter: invert(70%) sepia(49%) saturate(257%) hue-rotate(1deg) brightness(93%) contrast(88%);
+}
+
 #flavor-description {
   text-align: center;
   padding: 0px 12px;
