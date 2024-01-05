@@ -75,7 +75,7 @@
             <p id="flavor-description"></p>
             <div class="cart">
               <div>
-                <button>
+                <button onclick="increment()">
                   <img
                     src="./images/plus.png"
                     alt="Plus Icon"
@@ -84,10 +84,10 @@
                 </button>
               </div>
               <div>
-                <input type="text" placeholder="0" />
+                <input type="text" value="0" id="value" />
               </div>
               <div>
-                <button class="cart-button">
+                <button onclick="decrement()" class="cart-button">
                   <img
                     src="./images/minus.png"
                     alt="Subtract Icon"
@@ -98,7 +98,8 @@
             </div>
           </div>
           <div class="close-modal">
-            <button onclick="toggle()">OK</button>
+            <button onclick="toggle()" id="reset">OK</button>
+            <button onclick="addtoCart()">Add to Cart</button>
           </div>
         </div>
       </article>
